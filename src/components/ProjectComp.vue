@@ -1,0 +1,53 @@
+<template>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col" v-for="item in projects" :key="item.id">
+                    <div class="card img-fluid" style="width: 18rem;" loading="lazy">
+                        <img :src="item.image" class="card-img-top" :alt="item.name">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ item.name }}</h5>
+                          <p class="card-text">{{ item.description }}</p>
+                          <a href="{{ item.github }}" class="btn">Github</a>
+                          <a href="{{ item.netlify }}" class="btn">Netlify</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+       computed : {
+        projects() {
+            return this.$store.state.projects
+        }
+       },
+       mounted () {
+        this.$store.dispatch('fetchProjects')
+       }
+    }
+</script>
+
+<style scoped>
+h1{
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.card{
+    height: 65vh;
+    margin-bottom: 1rem;
+}
+
+h5{
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+img{
+    padding: .5rem;
+}
+</style>
