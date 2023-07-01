@@ -31,7 +31,7 @@ nav {
 nav a {
   font-weight: bold;
   color: white;
-  margin: 1rem;
+  margin: .2rem;
 }
 
 </style>
