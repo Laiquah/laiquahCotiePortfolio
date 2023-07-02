@@ -8,8 +8,8 @@
                         <div class="card-body">
                           <h5 class="card-title">{{ item.name }}</h5>
                           <p class="card-text">{{ item.description }}</p>
-                          <a href="{{ item.github }}" class="btn">Github</a>
-                          <a href="{{ item.netlify }}" class="btn">Netlify</a>
+                          <a href="{{ item.github }}" class="btn" target="_blank">Github</a>
+                          <a href="{{ item.netlify }}" class="btn" target="_blank">Netlify</a>
                         </div>
                     </div>
                 </div>
@@ -49,5 +49,11 @@ h5{
 
 img{
     padding: .5rem;
+}
+
+@media screen and (max-width: 300px) {
+    .card{
+        height : 75vh;
+    }
 }
 </style>
