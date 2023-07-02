@@ -22,5 +22,6 @@ h1{
 
 div{
     background-color: #FFE0F6;
-}
+    color: white;
+  }
 </style>

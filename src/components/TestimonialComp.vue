@@ -12,7 +12,7 @@
                             <div class="card-body">
                               <h5 class="card-title">{{ item.name }}</h5>
                               <p class="card-text"><small class="text-body-secondary">{{ item.role }}</small></p>
-                              <p class="card-text">{{ item.words }}</p>
+                              <p class="card-text">"{{ item.words }}"</p>
                             </div>
                           </div>
                         </div>
