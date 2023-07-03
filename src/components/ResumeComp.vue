@@ -1,92 +1,99 @@
 <template>
-    <div>
-        <div class="container">
-            <h4>Education:</h4>
-            <div class="col" v-for="item in education" :key="item.id">
-                <div class="row">
-                    <div class="card" style="width: 18rem;">
-                        <img :src="item.image" class="card-img-top" :alt="item.place">
-                        <div class="card-body">
-                          <p class="card-text">{{ item.place }}</p>
-                          <p class="card-text">{{ item.qualification }}</p>
-                          <p class="card-text">{{ item.year }}</p>
-                        </div>
-                      </div>
-                </div>
+  <div>
+    <div class="container">
+      <h4>Education:</h4>
+      <div class="col" v-for="item in education" :key="item.id">
+        <div class="row" id="education">
+          <div class="card" style="width: 18rem">
+            <img :src="item.image" class="card-img-top" :alt="item.place" />
+            <div class="card-body">
+              <p class="card-text">{{ item.place }}</p>
+              <p class="card-text">{{ item.qualification }}</p>
+              <p class="card-text">{{ item.year }}</p>
             </div>
-            <h4>Soft skills:</h4>
-            <div class="col" v-for="item in softskills" :key="item.id">
-                <div class="row">
-                    <div class="card">
-                        <div class="card-body">
-                          {{ item.soft }}
-                        </div>
-                      </div>
-                </div>
-            </div>
-            <h4>Hard skills:</h4>
-            <div class="col" v-for="item in hardskills" :key="item.id">
-                <div class="row">
-                    <div class="card" style="width: 18rem;">
-                        <p class="card-text">{{ item.name }}</p>
-                        <div class="card-body">
-                            <img :src="item.icon" class="card-img-top" :alt="item.name">
-                        </div>
-                      </div>
-                </div>
-            </div>
-            <h4>Experience:</h4>
-            <div class="col" v-for="item in experience" :key="item.id">
-                <div class="row">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                          <div class="col-md-4">
-                            <img :src="item.image" class="img-fluid rounded-start" :alt="item.place">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">{{ item.place }}</h5>
-                              <p class="card-text">{{ item.role }}</p>
-                              <p class="card-text">{{ item.description }}</p>
-                              <p class="card-text"><small class="text-body-secondary">{{ item.year }}</small></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+      <h4>Soft skills:</h4>
+      <div class="col" v-for="item in softskills" :key="item.id">
+        <div class="row">
+          <div class="card">
+            <div class="card-body">
+              {{ item.soft }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <h4>Hard skills:</h4>
+      <div class="col" v-for="item in hardskills" :key="item.id">
+        <div class="row">
+          <div class="card" style="width: 18rem">
+            <p class="card-text">{{ item.name }}</p>
+            <div class="card-body">
+              <img :src="item.icon" class="card-img-top" :alt="item.name" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <h4>Experience:</h4>
+      <div class="row">
+        <div class="col" v-for="item in experience" :key="item.id">
+          <div class="card mb-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  :src="item.image"
+                  class="img-fluid rounded-start"
+                  :alt="item.place"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.place }}</h5>
+                  <p class="card-text">{{ item.role }}</p>
+                  <p class="card-text">{{ item.description }}</p>
+                  <p class="card-text">
+                    <small class="text-body-secondary">{{ item.year }}</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        computed: {
-            education() {
-                return this.$store.state.education
-            },
-            softskills() {
-                return this.$store.state.softskills
-            },
-            hardskills() {
-                return this.$store.state.hardskills
-            },
-            experience() {
-                return this.$store.state.experience
-            }
-        },
-        mounted() {
-            this.$store.dispatch('fetchEducation')
-            this.$store.dispatch('fetchSoftskills')
-            this.$store.dispatch('fetchHardskills')
-            this.$store.dispatch('fetchExperience')   
-        }
-    }
+export default {
+  computed: {
+    education() {
+      return this.$store.state.education;
+    },
+    softskills() {
+      return this.$store.state.softskills;
+    },
+    hardskills() {
+      return this.$store.state.hardskills;
+    },
+    experience() {
+      return this.$store.state.experience;
+    },
+  },
+  mounted() {
+    this.$store.dispatch("fetchEducation");
+    this.$store.dispatch("fetchSoftskills");
+    this.$store.dispatch("fetchHardskills");
+    this.$store.dispatch("fetchExperience");
+  },
+};
 </script>
 
 <style scoped>
-h4{
-    text-decoration: underline;
-    font-weight: 700;
+h4 {
+  text-decoration: underline;
+  font-weight: 700;
 }
+
 </style>
