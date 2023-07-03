@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="container">
-            <div class="col" v-for="item in testimonials" :key="item.id">
-                <div class="row">
-                    <div class="card mb-3" style="max-width: 540px;">
+            <div class="row">
+                <div class="col" v-for="item in testimonials" :key="item.id">
+                    <div class="card mb-3" style="width: 28rem; height: 24rem">
                         <div class="row g-0">
                           <div class="col-md-4">
                             <img :src="item.image" class="img-fluid rounded-start" :alt="item.name">
@@ -12,7 +12,7 @@
                             <div class="card-body">
                               <h5 class="card-title">{{ item.name }}</h5>
                               <p class="card-text"><small class="text-body-secondary">{{ item.role }}</small></p>
-                              <p class="card-text">"{{ item.words }}"</p>
+                              <p class="card-text"><small>"{{ item.words }}"</small></p>
                             </div>
                           </div>
                         </div>

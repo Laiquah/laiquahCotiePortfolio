@@ -2,8 +2,8 @@
   <div>
     <div class="container">
       <h4>Education:</h4>
+      <div class="row d-flex justify-content-center" id="education">
       <div class="col" v-for="item in education" :key="item.id">
-        <div class="row" id="education">
           <div class="card" style="width: 18rem">
             <img :src="item.image" class="card-img-top" :alt="item.place" />
             <div class="card-body">
@@ -15,8 +15,8 @@
         </div>
       </div>
       <h4>Soft skills:</h4>
+      <div class="row">
       <div class="col" v-for="item in softskills" :key="item.id">
-        <div class="row">
           <div class="card">
             <div class="card-body">
               {{ item.soft }}
@@ -25,12 +25,12 @@
         </div>
       </div>
       <h4>Hard skills:</h4>
+      <div class="row">
       <div class="col" v-for="item in hardskills" :key="item.id">
-        <div class="row">
-          <div class="card" style="width: 18rem">
+          <div class="card mb-3" style="width: 18rem">
             <p class="card-text">{{ item.name }}</p>
             <div class="card-body">
-              <img :src="item.icon" class="card-img-top" :alt="item.name" />
+              <img :src="item.icon" id="icon" class="card-img-top" :alt="item.name" />
             </div>
           </div>
         </div>
@@ -96,4 +96,7 @@ h4 {
   font-weight: 700;
 }
 
+#icon{
+    width: 10rem;
+}
 </style>
