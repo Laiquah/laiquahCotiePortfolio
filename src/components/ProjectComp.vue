@@ -3,13 +3,13 @@
         <div class="container">
             <div class="row">
                 <div class="col" v-for="item in projects" :key="item.id">
-                    <div class="card img-fluid" style="width: 18rem;" loading="lazy">
+                    <div class="card img-fluid" style="width: 13rem;" loading="lazy">
                         <img :src="item.image" class="card-img-top" :alt="item.name">
                         <div class="card-body">
                           <h5 class="card-title">{{ item.name }}</h5>
                           <p class="card-text">{{ item.description }}</p>
-                          <a href="{{ item.github }}" class="btn" target="_blank">Github</a>
-                          <a href="{{ item.netlify }}" class="btn" target="_blank">Netlify</a>
+                          <a :href="item.github" class="btn" target="_blank">Github</a>
+                          <a :href="item.netlify" class="btn" target="_blank">Netlify</a>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ h1{
 }
 
 .card{
-    height: 65vh;
+    height: 110vh;
     margin-bottom: 1rem;
 }
 
@@ -51,7 +51,7 @@ img{
     padding: .5rem;
 }
 
-@media screen and (max-width: 300px) {
+@media (width < 300px) {
     .card{
         height : 75vh;
     }
