@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Landing Page</h1>
     <Home/>
   </div>
 </template>
@@ -22,6 +21,6 @@ h1{
 
 div{
   background-color: #FFE0F6;
-  color: white;
+  color: black;
 }
 </style>
