@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col" v-for="item in projects" :key="item.id">
                     <div class="card img-fluid" style="width: 13rem;" loading="lazy">
-                        <img :src="item.image" class="card-img-top" :alt="item.name">
+                        <img :src="item.image" class="card-img-top" :alt="item.name" loading="lazy">
                         <div class="card-body">
                           <h5 class="card-title">{{ item.name }}</h5>
                           <p class="card-text">{{ item.description }}</p>
