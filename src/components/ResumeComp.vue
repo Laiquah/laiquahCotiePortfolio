@@ -4,7 +4,7 @@
       <h4>Education:</h4>
       <center>
       <div class="row d-flex justify-content-center" id="education">
-      <div class="col" v-for="item in education" :key="item.id">
+      <div class="col" v-for="item in education" :key="item.id" data-aos="zoom-in">
           <div class="card" style="width: 18rem" id="card">
             <img :src="item.image" style="height: 18rem;" class="card-img-top" :alt="item.place" />
             <div class="card-body">
@@ -18,7 +18,7 @@
       </center>
       <h4>Soft skills:</h4>
       <div class="row">
-      <div class="col" v-for="item in softskills" :key="item.id">
+      <div class="col" v-for="item in softskills" :key="item.id" data-aos="zoom-in">
           <div class="card" id="skills">
             <div class="card-body">
               {{ item.soft }}
@@ -28,8 +28,8 @@
       </div>
       <h4>Hard skills:</h4>
       <div class="row">
-      <div class="col" v-for="item in hardskills" :key="item.id">
-          <div class="card mb-3" style="width: 18rem" id="card">
+      <div class="col" v-for="item in hardskills" :key="item.id" data-aos="zoom-in">
+          <div class="card mb-3" style="width: 18rem">
             <p class="card-text">{{ item.name }}</p>
             <div class="card-body">
               <img :src="item.icon" id="icon" class="card-img-top" :alt="item.name" />
@@ -39,7 +39,7 @@
       </div>
       <h4>Experience:</h4>
       <div class="row">
-        <div class="col" v-for="item in experience" :key="item.id">
+        <div class="col" v-for="item in experience" :key="item.id" data-aos="zoom-in">
           <div class="card mb-3" style="max-width: 540px">
             <div class="row g-0">
               <div class="col-md-4">

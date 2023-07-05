@@ -141,6 +141,7 @@ button:hover{
   }
   
   .card {
+    margin-top: 1rem;
     padding: .2rem;
     background-color: #FF95E1;
     border-radius: 22px;
@@ -162,7 +163,7 @@ button:hover{
     box-shadow: 0px 0px 30px 1px #FFE0F6;
   }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width:300px) {
     .card{
         width: 300px;
     }
@@ -178,5 +179,23 @@ button:hover{
         margin: 1rem;
         border: 0;
     }
+}
+
+@media (max-width : 700px) {
+  .card{
+      width: 600px !important;
+  }
+
+  .button1{
+      padding: 0;
+      margin: 1rem;
+      border: 0;
+  }
+
+  .button2{
+      padding: 0;
+      margin: 1rem;
+      border: 0;
+  }
 }
 </style>

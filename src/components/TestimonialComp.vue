@@ -2,7 +2,7 @@
     <div>
         <div class="container">
             <div class="row">
-                <div class="col" v-for="item in testimonials" :key="item.id">
+                <div class="col" v-for="item in testimonials" :key="item.id" data-aos="zoom-in">
                     <div class="card mb-3" style="width: 28rem; height: 24rem" id="card">
                         <div class="row g-0" id="body">
                           <div class="col-md-4">

@@ -111,12 +111,6 @@ img {
   padding: 1rem;
 }
 
-.about {
-  padding-bottom: 1rem;
-  background-color: #FFE0F6;
-  color: black;
-}
-
 .btn {
   font-size: 18px;
   letter-spacing: 2px;
@@ -126,7 +120,7 @@ img {
   font-weight: bold;
   padding: 0.7em 2em;
   border: 3px solid #FF95E1;
-  border-radius: 2px;
+  border-radius: 20px;
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
   color: black;
@@ -147,6 +141,7 @@ img {
   content: '';
   background-color: #FF95E1;
   z-index: -1;
+  border-radius: 10px;
 }
 
 .btn:hover, .btn:focus {
