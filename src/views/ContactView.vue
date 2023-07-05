@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>Contact me:</h1>
         <Contact/>
     </div>
 </template>
@@ -19,9 +18,4 @@ h1{
     text-decoration: underline;
     font-weight: 700;
 }
-
-div{
-    background-color: #FFE0F6;
-    color: white;
-  }
 </style>
