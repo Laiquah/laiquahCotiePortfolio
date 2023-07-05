@@ -57,4 +57,14 @@ input{
 textarea{
     width: 20rem;
 }
+
+@media screen and (max-width: 300px) {
+    input{
+        width: 11rem;
+    }
+
+    textarea{
+        width: 11rem;
+    }
+}
 </style>

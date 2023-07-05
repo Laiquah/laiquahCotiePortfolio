@@ -51,9 +51,9 @@ img{
     padding: .5rem;
 }
 
-@media (width < 300px) {
+@media screen and  (max-width: 300px) {
     .card{
-        height : 75vh;
+        height : fit-content;
     }
 }
 </style>

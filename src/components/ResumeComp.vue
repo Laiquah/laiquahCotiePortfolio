@@ -4,7 +4,7 @@
       <h4>Education:</h4>
       <div class="row d-flex justify-content-center" id="education">
       <div class="col" v-for="item in education" :key="item.id">
-          <div class="card" style="width: 18rem">
+          <div class="card" style="width: 18rem" id="card">
             <img :src="item.image" class="card-img-top" :alt="item.place" />
             <div class="card-body">
               <p class="card-text">{{ item.place }}</p>
@@ -27,7 +27,7 @@
       <h4>Hard skills:</h4>
       <div class="row">
       <div class="col" v-for="item in hardskills" :key="item.id">
-          <div class="card mb-3" style="width: 18rem">
+          <div class="card mb-3" style="width: 18rem" id="card">
             <p class="card-text">{{ item.name }}</p>
             <div class="card-body">
               <img :src="item.icon" id="icon" class="card-img-top" :alt="item.name" />
@@ -98,5 +98,13 @@ h4 {
 
 #icon{
     width: 10rem;
+}
+
+@media screen and (max-width: 300px) {
+  #card{
+     width: 280px !important;
+     display: inline-block;
+  }
+  
 }
 </style>
