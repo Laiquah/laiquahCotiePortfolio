@@ -15,9 +15,9 @@
     </p>
     <h3>Interests:</h3>
     <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <div class="card" style="width: 18rem">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+        <div class="col">
+          <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/Zq0KthFV/florian-olivo-4hb-J-eym-Z1o-unsplash.jpg"
               class="card-img-top"
@@ -28,8 +28,8 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
-          <div class="card" style="width: 18rem">
+        <div class="col">
+          <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/xdP3MbFF/thought-catalog-OJZB0-VUQKKc-unsplash.jpg"
               class="card-img-top"
@@ -40,8 +40,8 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
-          <div class="card" style="width: 18rem">
+        <div class="col">
+          <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/FzhRc78G/marcela-laskoski-Yrt-Flr-Lo2-DQ-unsplash.jpg"
               class="card-img-top"
@@ -56,9 +56,9 @@
     </div>
     <h3>Hobbies:</h3>
     <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <div class="card" style="width: 18rem">
+      <div class="row rol-cols-1 row-cols-sm-2 row-cols-lg-3">
+        <div class="col">
+          <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/T2CR9ZY3/theme-photos-Hx7xdwhj2-AY-unsplash.jpg"
               class="card-img-top"
@@ -69,8 +69,8 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
-          <div class="card" style="width: 18rem">
+        <div class="col">
+          <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/nV46Y5Zw/fredrick-tendong-6ou8g-Wp-S9ns-unsplash.jpg"
               class="card-img-top"
@@ -81,8 +81,8 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
-          <div class="card" style="width: 18rem">
+        <div class="col">
+          <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/D07JJDdb/neslihan-gunaydin-Bdu-Dcry-SLKM-unsplash.jpg"
               class="card-img-top"
@@ -95,6 +95,7 @@
         </div>
       </div>
     </div>
+    <center><a href="/resume" class="btn">find out more</a></center>
   </div>
 </template>
 
@@ -110,5 +111,16 @@ img {
 
 .about {
   padding-bottom: 1rem;
+}
+
+.btn{
+  border: 3px solid ;
+}
+
+@media screen and (max-width: 300px) {
+  #card{
+    display: flex !important;
+    flex-direction: column;
+  }
 }
 </style>

@@ -3,8 +3,8 @@
         <div class="container">
             <div class="row">
                 <div class="col" v-for="item in testimonials" :key="item.id">
-                    <div class="card mb-3" style="width: 28rem; height: 24rem">
-                        <div class="row g-0">
+                    <div class="card mb-3" style="width: 28rem; height: 24rem" id="card">
+                        <div class="row g-0" id="body">
                           <div class="col-md-4">
                             <img :src="item.image" class="img-fluid rounded-start" :alt="item.name">
                           </div>
@@ -37,5 +37,14 @@
 </script>
 
 <style scoped>
+@media screen and (max-width: 300px) {
+    img{
+        width: 4rem;
+    }
 
+    #card{
+        width: 12rem !important;
+        height: fit-content !important;
+    }
+}
 </style>

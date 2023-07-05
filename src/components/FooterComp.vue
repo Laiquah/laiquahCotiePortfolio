@@ -45,4 +45,10 @@ div{
 .circle:hover {
   background-color: white;
 }
+
+@media screen and (max-width: 300px) {
+  .socials{
+    width: 10rem
+  }
+}
 </style>
