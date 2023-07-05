@@ -21,18 +21,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-
-nav {
-  padding: 30px;
+  background-color: #FFE0F6;
+  color: white;
 }
 
 nav a {
   font-weight: bold;
   color: white;
-  margin: .2rem;
+  margin: .8rem;
 }
 
 </style>

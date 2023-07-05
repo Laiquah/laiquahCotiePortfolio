@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>ABOUT ME:</h1>
     <About/>
   </div>
 </template>

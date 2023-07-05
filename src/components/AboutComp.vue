@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <div class="container">
     <p>
       My name is Laiquah Cotie, and I am a driven and devoted professional who
       is deeply passionate about coding. My greatest satisfaction comes from
@@ -13,7 +14,8 @@
       stakeholders. I am enthusiastic about the prospect of applying my
       expertise and energy to a fresh challenge.
     </p>
-    <h3>Interests:</h3>
+    </div>
+    <h1>Interests:</h1>
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
         <div class="col">
@@ -54,7 +56,7 @@
         </div>
       </div>
     </div>
-    <h3>Hobbies:</h3>
+    <h1 id="h2">Hobbies:</h1>
     <div class="container">
       <div class="row rol-cols-1 row-cols-sm-2 row-cols-lg-3">
         <div class="col">
@@ -111,16 +113,94 @@ img {
 
 .about {
   padding-bottom: 1rem;
+  background-color: #FFE0F6;
+  color: black;
 }
 
-.btn{
-  border: 3px solid ;
+.btn {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #FF95E1;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  margin: 1rem;
+}
+
+.btn:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #FF95E1;
+  z-index: -1;
+}
+
+.btn:hover, .btn:focus {
+  color: white;
+}
+
+.btn:hover:before, .btn:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+#h2{
+  margin-top: 1rem;
+}
+
+h1{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+p{
+  font-weight: 800;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 300px) {
   #card{
     display: flex !important;
     flex-direction: column;
+    width: 270px !important;
+    margin-bottom: .4rem;
+  }
+
+  img{
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #card{
+    display: flex !important;
+    flex-direction: column;
+    width: 270px !important;
+    margin-bottom: .4rem;
+  }
+
+  img{
+    width: 270px;
   }
 }
 </style>

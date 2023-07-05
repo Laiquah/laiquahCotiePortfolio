@@ -47,4 +47,15 @@
         height: fit-content !important;
     }
 }
+
+@media screen and (max-width: 700px) {
+    img{
+        width: 4rem;
+    }
+
+    #card{
+        width: 25rem !important;
+        height: fit-content !important;
+    }
+}
 </style>

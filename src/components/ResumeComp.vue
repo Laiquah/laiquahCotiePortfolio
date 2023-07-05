@@ -2,10 +2,11 @@
   <div>
     <div class="container">
       <h4>Education:</h4>
+      <center>
       <div class="row d-flex justify-content-center" id="education">
       <div class="col" v-for="item in education" :key="item.id">
           <div class="card" style="width: 18rem" id="card">
-            <img :src="item.image" class="card-img-top" :alt="item.place" />
+            <img :src="item.image" style="height: 18rem;" class="card-img-top" :alt="item.place" />
             <div class="card-body">
               <p class="card-text">{{ item.place }}</p>
               <p class="card-text">{{ item.qualification }}</p>
@@ -14,10 +15,11 @@
           </div>
         </div>
       </div>
+      </center>
       <h4>Soft skills:</h4>
       <div class="row">
       <div class="col" v-for="item in softskills" :key="item.id">
-          <div class="card">
+          <div class="card" id="skills">
             <div class="card-body">
               {{ item.soft }}
             </div>
@@ -98,6 +100,24 @@ h4 {
 
 #icon{
     width: 10rem;
+}
+
+#card:hover {
+  transform: scale(1.05);
+  transition: ease-in .6s;
+  box-shadow: 0 0 5px #FF95E1,
+              0 0 20px #FF95E1,
+              0 0 50px #FF95E1,
+              0 0 100px #FF95E1;
+}
+
+#skills:hover{
+  background-color: #FF95E1;
+  box-shadow: inset 2px 2px 2px 2px #FFE0F6;
+}
+
+h4{
+  margin-top: 2rem;
 }
 
 @media screen and (max-width: 300px) {
