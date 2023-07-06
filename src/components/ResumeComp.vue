@@ -74,7 +74,7 @@
         </div>
       </div>
     </div>
-    <a href="/resume" class="btn">Download CV here</a>
+    <a href="https://drive.google.com/file/d/1o15K-VOjBi1sun9mzMGNjpGd7dW0ySLl/view?usp=drive_link" class="btn" target="_blank">Download CV here</a>
   </div>
 </template>
 

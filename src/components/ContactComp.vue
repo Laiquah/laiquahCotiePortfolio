@@ -163,9 +163,9 @@ button:hover{
     box-shadow: 0px 0px 30px 1px #FFE0F6;
   }
 
-@media screen and (max-width:300px) {
+@media (width > 300px) {
     .card{
-        width: 300px;
+        width: 280px !important;
     }
 
     .button1{
@@ -181,7 +181,7 @@ button:hover{
     }
 }
 
-@media (max-width : 700px) {
+@media (width > 700px) {
   .card{
       width: 600px !important;
   }
