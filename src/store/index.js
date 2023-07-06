@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 
-const dataURL = "https://laiquah.github.io/eomp_server/data.json";
+const dataURL = "https://laiquah.github.io/eomp_server/database/data.json";
 
 export default createStore({
   state: {

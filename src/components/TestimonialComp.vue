@@ -3,16 +3,16 @@
         <div class="container">
             <div class="row">
                 <div class="col" v-for="item in testimonials" :key="item.id" data-aos="zoom-in">
-                    <div class="card mb-3" style="width: 28rem; height: 24rem" id="card">
+                    <div class="card mb-3" id="card">
                         <div class="row g-0" id="body">
                           <div class="col-md-4">
                             <img :src="item.image" class="img-fluid rounded-start" :alt="item.name">
                           </div>
                           <div class="col-md-8">
                             <div class="card-body">
-                              <h5 class="card-title">{{ item.name }}</h5>
+                              <h5 class="card-title" id="name">{{ item.name }}</h5>
                               <p class="card-text"><small class="text-body-secondary">{{ item.role }}</small></p>
-                              <p class="card-text"><small>"{{ item.words }}"</small></p>
+                              <p class="card-text" id="words"><small>"{{ item.words }}"</small></p>
                             </div>
                           </div>
                         </div>
@@ -37,7 +37,27 @@
 </script>
 
 <style scoped>
-@media screen and (max-width: 300px) {
+
+#card{
+    margin-top: 1rem;
+    width: 55rem;
+    height: 16rem;
+}
+
+img{
+    width: 10rem;
+}
+
+#name{
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+#words{
+    font-style: italic;
+}
+
+@media (width < 300px) {
     img{
         width: 4rem;
     }
@@ -48,7 +68,7 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media (width < 700px) {
     img{
         width: 4rem;
     }

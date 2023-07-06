@@ -6,23 +6,23 @@
               <form class="form" action="https://formspree.io/f/xrgwgzwd" method="POST">
               <p id="heading">Contact here</p>
               <div class="field">
-                <input type="text" class="input-field" placeholder="First name" autocomplete="off">
+                <input type="text" class="input-field" placeholder="First name" autocomplete="off" name="name" required>
               </div>
               <div class="field">
-                <input type="text" class="input-field" placeholder="Last name" autocomplete="off">
+                <input type="text" class="input-field" placeholder="Last name" name="name" autocomplete="off" required>
               </div>
               <div class="field">
-                <input type="text" class="input-field" placeholder="+27 11 222 3333" autocomplete="off">
+                <input type="text" class="input-field" placeholder="+27 11 222 3333" name="number" autocomplete="off" required>
               </div>
               <div class="field">
-                <input type="text" class="input-field" placeholder="Email" autocomplete="off">
+                <input type="text" class="input-field" placeholder="Email" name="email" autocomplete="off" required>
               </div>
               <div class="field">
-                <input type="text" class="input-field" placeholder="Leave a message here..." autocomplete="off">
+                <input type="text" class="input-field" placeholder="Leave a message here..." name="text" autocomplete="off" required>
               </div>
-              <div class="btn">
+              <div class="btn0">
               <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-              <button class="button2">Clear</button>
+              <button class="button2" type="reset">Clear</button>
               </div>
               
           </form>
@@ -98,7 +98,7 @@ button:hover{
     color: black;
   }
   
-  .form .btn {
+  .form .btn0 {
     display: flex;
     justify-content: center;
     flex-direction: row;
