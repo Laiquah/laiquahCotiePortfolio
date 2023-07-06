@@ -48,6 +48,11 @@ img{
     width: 10rem;
 }
 
+img:hover{
+    transform: scale(1.05);
+    transition: ease-in .2s;
+}
+
 #name{
     font-weight: 800;
     text-decoration: underline;
