@@ -1,52 +1,61 @@
 <template>
   <div>
     <div class="container">
-      <h4>Education:</h4>
+      <h1>Education:</h1>
       <center>
       <div class="row d-flex justify-content-center" id="education">
       <div class="col" v-for="item in education" :key="item.id" data-aos="zoom-in">
-          <div class="card" style="width: 18rem" id="card">
-            <img :src="item.image" style="height: 18rem;" class="card-img-top" :alt="item.place" />
-            <div class="card-body">
-              <p class="card-text">{{ item.place }}</p>
-              <p class="card-text">{{ item.qualification }}</p>
-              <p class="card-text">{{ item.year }}</p>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img :src="item.image" class="img-fluid rounded-start" :alt="item.place" id="image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.place }}</h5>
+                <p class="card-text">{{ item.qualification }}</p>
+                <p class="card-text"><small class="text-body-secondary">{{ item.year }}</small></p>
+              </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
       </center>
-      <h4>Soft skills:</h4>
-      <div class="row">
+      <h1>Soft skills:</h1>
+      <div class="row row-cols-1">
       <div class="col" v-for="item in softskills" :key="item.id" data-aos="zoom-in">
           <div class="card" id="skills">
             <div class="card-body">
-              {{ item.soft }}
+              <h2>{{ item.soft }}</h2>
+              <p id="des">{{ item.description }}</p>
             </div>
           </div>
         </div>
       </div>
-      <h4>Hard skills:</h4>
+      <h1>Hard skills:</h1>
       <div class="row">
       <div class="col" v-for="item in hardskills" :key="item.id" data-aos="zoom-in">
-          <div class="card mb-3" style="width: 18rem">
-            <p class="card-text">{{ item.name }}</p>
+          <div class="card mb-3" style="width: 18rem" id="card">
+            <p class="card-text" id="love">{{ item.name }}</p>
             <div class="card-body">
               <img :src="item.icon" id="icon" class="card-img-top" :alt="item.name" />
+              <p class="card-text" id="text">{{ item.description }}</p>
             </div>
           </div>
         </div>
       </div>
-      <h4>Experience:</h4>
+      <h1>Experience:</h1>
       <div class="row">
         <div class="col" v-for="item in experience" :key="item.id" data-aos="zoom-in">
-          <div class="card mb-3" style="max-width: 540px">
+          <center>
+          <div class="card mb-3" id="experience card">
             <div class="row g-0">
               <div class="col-md-4">
                 <img
                   :src="item.image"
                   class="img-fluid rounded-start"
-                  :alt="item.place"
+                  :alt="item.place" id="para"
                 />
               </div>
               <div class="col-md-8">
@@ -61,9 +70,11 @@
               </div>
             </div>
           </div>
+          </center>
         </div>
       </div>
     </div>
+    <a href="/resume" class="btn">Download CV here</a>
   </div>
 </template>
 
@@ -93,22 +104,98 @@ export default {
 </script>
 
 <style scoped>
-h4 {
+h1 {
   text-decoration: underline;
   font-weight: 700;
 }
 
-#icon{
-    width: 10rem;
+.btn {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #FF95E1;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  margin: 1rem;
 }
 
-#card:hover {
+.btn:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #FF95E1;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.btn:hover, .btn:focus {
+  color: white;
+}
+
+.btn:hover:before, .btn:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+#icon{
+    width: 7rem;
+}
+
+#love{
+  font-weight: 900;
+}
+
+#para{
+  margin-top: 2rem;
+}
+
+#experience:hover{
   transform: scale(1.05);
-  transition: ease-in .6s;
-  box-shadow: 0 0 5px #FF95E1,
-              0 0 20px #FF95E1,
-              0 0 50px #FF95E1,
-              0 0 100px #FF95E1;
+  transition: ease-in .2s;
+}
+
+#image{
+  height: 10rem;
+}
+
+#image:hover{
+  transform: scale(1.05);
+  transition: ease-in .2s;
+}
+
+#skills{
+  margin-bottom: 1rem;
+}
+
+#card:hover{
+  transform: scale(1.05);
+  transition: ease-in .2s;
+}
+
+#experience{
+  height: 15rem;
+  font-size: smaller;
+  width: 30rem !important;
 }
 
 #skills:hover{
@@ -120,11 +207,27 @@ h4{
   margin-top: 2rem;
 }
 
+h2{
+  text-decoration: underline;
+  font-weight: 800;
+}
+
+#text{
+  font-size: small;
+}
+
+#des{
+  font-size: smaller;
+}
+
 @media screen and (max-width: 300px) {
   #card{
      width: 280px !important;
      display: inline-block;
   }
   
+  #para{
+    margin: 0;
+  }
 }
 </style>

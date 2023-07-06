@@ -18,7 +18,7 @@
     <h1>Interests:</h1>
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
-        <div class="col">
+        <div class="col" data-aos="zoom-in">
           <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/Zq0KthFV/florian-olivo-4hb-J-eym-Z1o-unsplash.jpg"
@@ -30,7 +30,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" data-aos="zoom-in">
           <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/xdP3MbFF/thought-catalog-OJZB0-VUQKKc-unsplash.jpg"
@@ -42,7 +42,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" data-aos="zoom-in">
           <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/FzhRc78G/marcela-laskoski-Yrt-Flr-Lo2-DQ-unsplash.jpg"
@@ -59,7 +59,7 @@
     <h1 id="h2">Hobbies:</h1>
     <div class="container">
       <div class="row rol-cols-1 row-cols-sm-2 row-cols-lg-3">
-        <div class="col">
+        <div class="col" data-aos="zoom-in">
           <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/T2CR9ZY3/theme-photos-Hx7xdwhj2-AY-unsplash.jpg"
@@ -71,7 +71,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" data-aos="zoom-in">
           <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/nV46Y5Zw/fredrick-tendong-6ou8g-Wp-S9ns-unsplash.jpg"
@@ -83,7 +83,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" data-aos="zoom-in">
           <div class="card" style="width: 18rem" id="card">
             <img
               src="https://i.postimg.cc/D07JJDdb/neslihan-gunaydin-Bdu-Dcry-SLKM-unsplash.jpg"
@@ -109,6 +109,12 @@ export default {};
 img {
   width: 18rem;
   padding: 1rem;
+  border-radius: 10px !important;
+}
+
+img:hover{
+  transform: scale(1.05);
+  transition: ease-out .2s;
 }
 
 .btn {

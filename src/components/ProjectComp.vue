@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col" v-for="item in projects" :key="item.id">
-                    <div class="card img-fluid" style="width: 13rem; height: 24rem;" loading="lazy">
+                    <div class="card img-fluid" loading="lazy">
                         <img :src="item.image" class="card-img-top" :alt="item.name" loading="lazy">
                         <div class="card-body">
                           <h5 class="card-title">{{ item.name }}</h5>
@@ -40,6 +40,15 @@ h1{
 .card{
     height: 95vh;
     margin-bottom: 1rem;
+    width: 13rem;
+    height: 21rem;
+    margin-top: 1rem;
+}
+
+.card-text {
+    height: 162px;
+    overflow: auto;
+
 }
 
 
@@ -72,15 +81,19 @@ p{
     background-color: #FFE0F6;
 }
 
-@media screen and  (max-width: 300px) {
+@media (width < 300px) {
     .card{
         height : fit-content;
     }
 }
 
-@media screen and  (max-width: 700px) {
+@media (width < 700px) {
     .card{
-        height : fit-content;
+        margin-bottom: 1rem;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 }
+
 </style>
