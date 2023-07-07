@@ -17,7 +17,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Englebert', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -25,6 +25,7 @@ export default {
   color: white;
 }
 
+@import url('https://fonts.cdnfonts.com/css/englebert');
 nav a {
   font-weight: bold;
   color: white;

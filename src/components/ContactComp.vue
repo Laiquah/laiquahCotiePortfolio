@@ -1,24 +1,27 @@
 <template>
     <div>
         <center>
-        <div class="card">
+        <div class="card" id="card">
             <div class="card2">
-              <form class="form" action="https://formspree.io/f/xrgwgzwd" method="POST">
+              <form class="form" action="https://formspree.io/f/xrgwgzwd" method="POST" name="myForm">
               <p id="heading">Contact here</p>
               <div class="field">
-                <input type="text" class="input-field" placeholder="First name" autocomplete="off" name="name" required>
+                <input type="text" class="input-field" v-model="name" placeholder="First name" autocomplete="off" name="name" required oninvalid="this.setCustomValidity('invalid name')"
+                oninput="this.setCustomValidity('')">
               </div>
               <div class="field">
-                <input type="text" class="input-field" placeholder="Last name" name="name" autocomplete="off" required>
+                <input type="text" class="input-field" placeholder="Last name" v-model="surname" name="name" autocomplete="off" required oninvalid="this.setCustomValidity('invalid surname')"
+                oninput="this.setCustomValidity('')">
               </div>
               <div class="field">
-                <input type="text" class="input-field" placeholder="+27 11 222 3333" name="number" autocomplete="off" required>
+                <input type="text" class="input-field" placeholder="+27 11 222 3333" v-model="number" name="number" autocomplete="off" required oninvalid="this.setCustomValidity('invalid number')"
+                oninput="this.setCustomValidity('')">
               </div>
               <div class="field">
-                <input type="text" class="input-field" placeholder="Email" name="email" autocomplete="off" required>
+                <input type="text" class="input-field" placeholder="Email" name="email" v-model="email" autocomplete="off"  required oninvalid="this.setCustomValidity('invalid email')" oninput="this.setCustomValidity('')">
               </div>
               <div class="field">
-                <input type="text" class="input-field" placeholder="Leave a message here..." name="text" autocomplete="off" required>
+                <input type="text" class="input-field" placeholder="Leave a message here..." name="text" v-model="text" autocomplete="off"  required oninvalid="this.setCustomValidity('message required')" oninput="this.setCustomValidity('')">
               </div>
               <div class="btn0">
               <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
@@ -33,9 +36,9 @@
 </template>
 
 <script>
-    export default {
-        
-    }
+    export default{
+     
+  }
 </script>
 
 <style scoped>
@@ -163,9 +166,9 @@ button:hover{
     box-shadow: 0px 0px 30px 1px #FFE0F6;
   }
 
-@media (width > 300px) {
-    .card{
-        width: 280px !important;
+@media (width <= 300px) {
+    #card{
+        width: 300px !important;
     }
 
     .button1{
@@ -179,9 +182,14 @@ button:hover{
         margin: 1rem;
         border: 0;
     }
+
+    .field{
+      width: 230px;
+    }
+
 }
 
-@media (width > 700px) {
+@media (width <= 700px) {
   .card{
       width: 600px !important;
   }

@@ -46,7 +46,7 @@ h1{
 }
 
 .card-text {
-    height: 120px;
+    height: 162px;
     overflow: auto;
 }
 
