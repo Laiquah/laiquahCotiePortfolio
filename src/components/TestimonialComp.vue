@@ -3,6 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col" v-for="item in testimonials" :key="item.id" data-aos="zoom-in">
+                    <center>
                     <div class="card mb-3" id="card">
                         <div class="row g-0" id="body">
                           <div class="col-md-4">
@@ -17,6 +18,7 @@
                           </div>
                         </div>
                       </div>
+                      </center>
                 </div>
             </div>
         </div>
@@ -62,25 +64,30 @@ img:hover{
     font-style: italic;
 }
 
-@media (width < 300px) {
+@media (width <= 300px) {
     img{
         width: 4rem;
     }
 
     #card{
-        width: 12rem !important;
+        width: 100% !important;
+        height: fit-content;
+    }
+
+    #body{
+        width: 280px !important;
         height: fit-content !important;
     }
 }
 
-@media (width < 700px) {
-    img{
-        width: 4rem;
-    }
-
+@media (width = 700px) {
     #card{
-        width: 25rem !important;
-        height: fit-content !important;
+        height: fit-content;
+        width: 500px;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
     }
 }
+
 </style>

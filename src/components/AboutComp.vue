@@ -117,6 +117,8 @@ img:hover{
   transition: ease-out .2s;
 }
 
+@import url('https://fonts.cdnfonts.com/css/floraless');
+
 .btn {
   font-size: 18px;
   letter-spacing: 2px;

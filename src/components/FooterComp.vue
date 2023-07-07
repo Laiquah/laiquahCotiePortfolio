@@ -35,6 +35,8 @@ div{
   margin-top: 15px;
 }
 .circle {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 2rem;
   height: 2rem;
   display: flex;
